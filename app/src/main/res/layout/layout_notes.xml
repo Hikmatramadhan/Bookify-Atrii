@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_margin="8dp"
+        app:cardElevation="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/mHideNotes"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_tools_cancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:id="@+id/mNotesSettings"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_tools_settings"
+                app:layout_constraintBottom_toBottomOf="@+id/mHideNotes"
+                app:layout_constraintEnd_toStartOf="@+id/mHideNotes"
+                app:layout_constraintTop_toTopOf="@+id/mHideNotes"
+                app:tint="@color/colorPrimaryDark" />
+
+
+            <ImageView
+                android:id="@+id/mNextPage"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:visibility="invisible"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_tools_arrow_right"
+                app:layout_constraintBottom_toBottomOf="@+id/mHideNotes"
+                app:layout_constraintStart_toEndOf="@+id/mPageIndex"
+                app:layout_constraintTop_toTopOf="@+id/mHideNotes"
+                app:tint="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/mPageIndex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/mPreviousPage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mPreviousPage" />
+
+            <TextView
+                android:id="@+id/mNotFound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Not Found any Notes"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/mPreviousPage"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:visibility="invisible"
+                android:src="@drawable/ic_tools_arrow_left"
+                app:layout_constraintBottom_toBottomOf="@+id/mHideNotes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mHideNotes"
+                app:tint="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:id="@+id/mRefresh"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_tools_refresh"
+                app:layout_constraintBottom_toBottomOf="@+id/mHideNotes"
+                app:layout_constraintEnd_toStartOf="@+id/mNotesSettings"
+                app:layout_constraintTop_toTopOf="@+id/mHideNotes"
+                app:tint="@color/colorPrimaryDark" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mNotesRv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@+id/mAddNote"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mHideNotes"
+                tools:listitem="@layout/item_note_image" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mAddNote"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Add Note"
+                android:textSize="20sp"
+                app:icon="@drawable/baseline_edit_note_24"
+                app:iconGravity="textStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

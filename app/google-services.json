@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "71474524540",
+    "project_id": "bookify-hikmat",
+    "storage_bucket": "bookify-hikmat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71474524540:android:cff86c20dcca8079bff4f9",
+        "android_client_info": {
+          "package_name": "com.devatrii.bookify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDD2W_YTKXunin5lgqZv936FgjeCAUdcNs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

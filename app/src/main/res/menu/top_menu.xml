@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/option_night_mode"
+        android:icon="@drawable/ic_menu_night_mode"
+
+        android:title="Night Mode"/>
+
+    <item android:id="@+id/option_add_notes"
+        android:icon="@drawable/ic_tools_add_notes"
+        android:title="Add Notes"/>
+    <item android:id="@+id/option_full_screen"
+        android:icon="@drawable/ic_menu_full_screen"
+        android:title="Full Screen"/>
+
+    <item android:id="@+id/option_bookmarks"
+        android:icon="@drawable/ic_menu_bookmark_add"
+        android:title="Bookmark"/>
+
+    <item android:id="@+id/option_show_bookmarks"
+        android:icon="@drawable/ic_menu_my_bookmarks"
+        android:title="Show Bookmark"/>
+
+    <item android:id="@+id/option_open_pdf"
+        android:title="Open With"
+        android:icon="@drawable/ic_menu_pdf"/>
+
+    <item android:id="@+id/option_share_screenshot"
+        android:title="Share as Screenshot"
+        android:icon="@drawable/ic_menu_screenshot"/>
+</menu>
